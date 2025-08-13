@@ -323,11 +323,7 @@ class Cutlet:
             return ""
 
         text = normalize_text(text)
-        print("normalized", text)
         words = self.tagger(text)
-        print("words", words)
-        for word in words:
-            print(word.surface, word.feature.pron)
 
         tokens = self.romaji_tokens(words, capitalize, title)
         out = "".join([str(tok) for tok in tokens]).strip()
