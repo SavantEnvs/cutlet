@@ -1,0 +1,14 @@
+# Mayhem target: cutlet Japanese→romaji transliterator (Atheris/libFuzzer harness).
+# The cmd binary is the compiled ELF launcher that drives mayhem/fuzz/romaji_decoder.py; Atheris
+# instruments the cutlet library so the run records coverage (edges). Target name kept as
+# `romaji_decoder` — the historical Mayhem target name for this repo.
+project: savantenvs/cutlet
+target: romaji_decoder
+
+cmds:
+  - cmd: /mayhem/romaji_decoder
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/romaji_decoder/testsuite
