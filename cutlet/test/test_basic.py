@@ -119,6 +119,11 @@ SENTENCES = [
     (".big,bad bog", ".big,bad bog"),
     # ぢ romanizes as "ji" in Hepburn, like じ (yotsugana)
     ("はなぢ", "Hanaji"),
+    # https://dailyportalz.jp/kiji/180730203548
+    ("ターャジス", "Tayajisu"),
+    # https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%A4%E3%83%AA%E3%83%BC%E3%82%B9
+    # technically "Birely's Orange", but not fixing in core
+    ("バャリースオレンヂ", "Byariisuorenji"),
 ]
 
 SENTENCES_KUNREI = [
